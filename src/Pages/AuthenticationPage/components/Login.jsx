@@ -2,12 +2,10 @@
 import { useState,useEffect } from "react"
 import PostUser from '../../../Services/User'
 import { ToastContainer, toast } from 'react-toastify';
-import { useNavigate } from "react-router-dom";
 
 
 export const Login = () => {
 
-    const navigate = useNavigate();
     const [Email,SetEmail] = useState(""); 
     const [Password,SetPassword] = useState(""); 
     const [Submit,SetSubmit]= useState(false); 
@@ -34,7 +32,7 @@ export const Login = () => {
                 SetSubmit(false);
             })
         }
-    },[Submit])
+    },[Submit,Email,Password])
 
 
     let HandleRegisterRoute = () => {

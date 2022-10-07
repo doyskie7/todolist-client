@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { RouteLinks } from './Routes/PublicRoutes';
 import {BrowserRouter} from 'react-router-dom'
 import './App.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';

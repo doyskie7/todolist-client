@@ -33,7 +33,7 @@ function App() {
 
         }
         SetLoad(false);
-    },[])
+    },[Load])
 
     const renderElms = () => {
         if(isAuthorized === 0){
