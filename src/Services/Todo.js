@@ -10,7 +10,7 @@ export default class PostToDoList{
         try {
             switch(type){
                 case "create": 
-                    return await axios.post(this.API_URL+'api/create-todo',
+                    return await axios.post(this.API_URL+'api/v1/create-todo',
                         JSON.stringify(data), 
                         {headers: { 
                             'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ export default class PostToDoList{
                         })
 
                 case "get-all": 
-                    return await axios.post(this.API_URL+'api/fetch-todo',
+                    return await axios.post(this.API_URL+'api/v1/fetch-todo',
                         JSON.stringify(data), 
                         {headers: { 
                             'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export default class PostToDoList{
                           }
                         })
                 case "update": 
-                    return await axios.post(this.API_URL+'api/update-todo',
+                    return await axios.post(this.API_URL+'api/v1/update-todo',
                         JSON.stringify(data), 
                         {headers: { 
                             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export default class PostToDoList{
                         })
 
                 case "delete": 
-                        return await axios.post(this.API_URL+'api/delete-todo',
+                        return await axios.post(this.API_URL+'api/v1/delete-todo',
                             JSON.stringify(data), 
                             {headers: { 
                                 'Content-Type': 'application/json',

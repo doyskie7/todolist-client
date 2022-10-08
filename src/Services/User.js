@@ -9,7 +9,7 @@ export default class PostUser{
         try {
             switch(type){
                 case "signup": 
-                    return await axios.post(this.API_URL+'api/signin-user',
+                    return await axios.post(this.API_URL+'api/v1/signin-user',
                         JSON.stringify(data), 
                         {headers: { 
                             'Content-Type': 'application/json'
@@ -17,7 +17,7 @@ export default class PostUser{
                         })
 
                 case "login": 
-                    return await axios.post(this.API_URL+'api/login-user',
+                    return await axios.post(this.API_URL+'api/v1/login-user',
                         JSON.stringify(data), 
                         {headers: { 
                             'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export default class PostUser{
 
                 case "check-auth": 
                 console.log( authHeader());
-                    return await axios.post(this.API_URL+'api/check-auth',{}, {headers: authHeader()})
+                    return await axios.post(this.API_URL+'api/v1/check-auth',{}, {headers: authHeader()})
 
 
                 default : 
